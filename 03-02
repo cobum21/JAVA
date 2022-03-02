@@ -1,1 +1,15 @@
-첫수업
+클래스 설계 방법
+내피시-속성 - 고급 시스템 설정 - 고급 - 환경변수 - 시스템 변수에 할당 
+- 
+컴파일러
+인터프리터 
+
+class Test {
+   piblic static void main(String[] args) {
+      System.out.println("hello Java");
+  }
+}
+------------------------------------------------중간고사 
+javac java Test
+dir 
+java Test
