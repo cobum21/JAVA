@@ -1,0 +1,65 @@
+public class ConstTest {
+   // 일반적으로 멤버변수 수준에서 final 선언시 초기값
+   // 반드시 줘야 함
+   // 단, 생성자에서 초기화 할 수도 있음
+   
+   // final double PI;
+   
+   public static void main(String[] args) {
+      
+      /*
+       * final double PI = 3.14;
+       * 
+       * // final은 상수 선언으로 일단 값이 대입되면 변경 불가 
+       * PI = 3.141592;
+       */
+      
+      // 초기화 없이 final 선언하면 딱 1번 값 대입 가능
+      final double PI;
+      PI = 3.14;
+      
+      // PI = 3.141592; // 이미 상수 값 확정 되었으므로 오류 
+   }
+}
+
+
+public class DataTypeTest {
+
+	   public static void main(String[] args) {
+	      // 숫자 128을 변수에 저장하려면 변수는 무슨 데이터 타입?
+	      // byte i = 128; // 리터럴 128은 기본타입이 정수(int)임
+	      
+	      long l = 128L; // int형이 128이 long형 리터럴로 표현됨
+	            
+	      float f = 3.141592F; // 3.141592는 기본 double 타입
+	      
+	      System.out.println("10" + 20);
+	      System.out.println(10 + "20");
+	      System.out.println("10" + "20");
+	      System.out.println(10 + 20);
+	   }
+	}
+
+public class 변수초기화문제 {
+	   /*
+	    *  멤버변수 선언시 초기값 없으면 기본 값으로 초기화 됨
+	    *  byte~long : 0
+	    *  double , float : 0.0
+	    *  char : 공백
+	    *  boolean : false
+	    *  
+	    *  <참조형>
+	    *  String : null
+	    */
+	   String age;
+	   
+	   public static void main(String[] args) {
+	      int height; // 지역변수는 사용 전 반드시 초기화 필요
+	      height = 176;
+	      System.out.println("지역변수 초기화?" + height);
+	      
+	      변수초기화문제 obj = new 변수초기화문제();
+	      System.out.println("멤버변수 초기화?" + "[" + obj.age +"]");
+	   }
+
+	}
